@@ -6,7 +6,14 @@ namespace _15._04._2019
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
+			Faculty My = new Faculty("AMI", 900, "Dyak");
+			My.ChangeDean += ShowMessage;
+			My.DeanSurname = "Horlach";
+			My.ChangeDean -= ShowMessage;
+		}
+		static void ShowMessage(string Message)
+		{
+			Console.WriteLine(Message);
 		}
 	}
 }
